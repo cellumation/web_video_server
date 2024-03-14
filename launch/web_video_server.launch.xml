@@ -4,8 +4,8 @@
   <arg name="port"       default="8080"/>
 
   <node pkg="web_video_server" exec="web_video_server">
-    <param name='address' to="$(var address)"/>
-    <param name='port'    to="$(var port)"/>
+    <param name='address' value="$(var address)"/>
+    <param name='port'    value="$(var port)"/>
   </node>
 
 </launch>
