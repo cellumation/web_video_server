@@ -1,5 +1,9 @@
 #include "web_video_server/image_streamer.h"
-#include <cv_bridge/cv_bridge.hpp>
+#if __has_include(<cv_bridge/cv_bridge.hpp>)
+#include <cv_bridge/cv_bridge.hpp>  // For ROS Iron and up.
+#else
+#include <cv_bridge/cv_bridge.h>  // For ROS Humble and below
+#endif
 #include <iostream>
 
 namespace web_video_server
